@@ -1,4 +1,4 @@
-[English](./README.en.md)
+[中文](./README.md)
 
 # browser-media-skill
 
@@ -8,47 +8,56 @@
 [![Tests](https://github.com/EleJiuDeiChi/browser-media-skill/actions/workflows/test.yml/badge.svg)](https://github.com/EleJiuDeiChi/browser-media-skill/actions/workflows/test.yml)
 ![ffmpeg](https://img.shields.io/badge/ffmpeg-required-6A1B9A)
 
-这是一个可独立发布的 `browser-media` 技能仓库，用来做浏览器截图、录屏、GIF、标注和时间轴渲染。
+Portable browser media tooling for:
 
-## 能力
+- Playwright-based browser screenshots
+- browser flow recording to MP4
+- MP4 to GIF conversion
+- image and video annotations
+- declarative timeline rendering
+- event-driven button highlighting for product demos
 
-- 浏览器页面截图
-- Playwright 浏览器录屏
-- 录屏转标准 H.264 MP4
-- MP4 转 GIF
-- 图片、GIF、视频标注
-- 声明式时间轴渲染
-- 录制时采集点击事件并自动生成按钮级高亮时间轴
+This repository packages the `browser-media` skill as a standalone public project instead of a machine-local Codex setup.
 
-## 环境要求
+## Features
+
+- Capture screenshots from a browser page
+- Record browser flows with Playwright
+- Convert browser recordings to true H.264 MP4
+- Generate GIFs from MP4 recordings
+- Add annotations to images, GIFs, and videos
+- Render timeline projects with panels, text, arrows, spotlights, blur, and masks
+- Capture click events during recording and compile them into button-level highlight timelines
+
+## Requirements
 
 - Node.js 20+
 - Python 3.10+
 - `ffmpeg`
 
-## 安装
+## Install
 
-### 1. 安装 Node 依赖
+### 1. Install Node dependencies
 
 ```bash
 npm install
 ```
 
-### 2. 安装 Python 依赖
+### 2. Install Python dependencies
 
 ```bash
 python3 -m pip install -r requirements.txt
 ```
 
-### 3. 确认 ffmpeg 可用
+### 3. Ensure ffmpeg is available
 
 ```bash
 ffmpeg -version
 ```
 
-## CLI 命令
+## CLI
 
-所有 wrapper 都在 `./bin/` 目录：
+All wrappers live in `./bin/`.
 
 - `./bin/browser-capture`
 - `./bin/browser-record`
@@ -58,9 +67,9 @@ ffmpeg -version
 - `./bin/browser-timeline-render`
 - `./bin/browser-timeline-from-events`
 
-## 快速示例
+## Quick Examples
 
-### 截图
+### Screenshot a page
 
 ```bash
 ./bin/browser-capture \
@@ -69,7 +78,7 @@ ffmpeg -version
   --full-page
 ```
 
-### 录制浏览器流程
+### Record a browser flow
 
 ```bash
 ./bin/browser-record \
@@ -78,7 +87,7 @@ ffmpeg -version
   --out /tmp/example-flow.mp4
 ```
 
-### 录制并采集点击事件
+### Record with interaction events
 
 ```bash
 ./bin/browser-record \
@@ -88,7 +97,7 @@ ffmpeg -version
   --record-events
 ```
 
-### 从事件生成时间轴项目
+### Generate a timeline project from recorded events
 
 ```bash
 ./bin/browser-timeline-from-events \
@@ -97,7 +106,7 @@ ffmpeg -version
   --out /tmp/example-flow.generated.json
 ```
 
-### 渲染时间轴项目
+### Render a timeline project
 
 ```bash
 ./bin/browser-timeline-render \
@@ -105,7 +114,7 @@ ffmpeg -version
   --overwrite
 ```
 
-### 转 GIF
+### Convert MP4 to GIF
 
 ```bash
 ./bin/browser-gif \
@@ -113,7 +122,9 @@ ffmpeg -version
   --out /tmp/example-flow.gif
 ```
 
-## 时间轴引擎支持
+## Timeline Engine
+
+The timeline renderer supports:
 
 - `box`
 - `text`
@@ -123,7 +134,7 @@ ffmpeg -version
 - `mask`
 - `panel`
 
-同时支持一些更偏剪辑风格的参数：
+It also supports motion and editorial-style presentation attributes such as:
 
 - `fadeInMs`
 - `fadeOutMs`
@@ -134,9 +145,9 @@ ffmpeg -version
 - `panelPadding`
 - `panelOpacity`
 
-## 模板
+## Templates
 
-仓库内置模板在 `templates/`：
+See the `templates/` directory for starter files:
 
 - `basic-click-flow.json`
 - `login-flow.json`
@@ -145,20 +156,16 @@ ffmpeg -version
 - `timeline-project-basic.json`
 - `timeline-project-demo.json`
 
-## 测试
+## Testing
 
-运行 Node 测试：
+Run the Node test suite:
 
 ```bash
 npm test
 ```
 
-## 说明
+## Notes
 
-- 这个仓库只处理浏览器媒体，不做桌面录屏。
-- 录屏质量取决于 Playwright 录制链路和页面视口稳定性。
-- 基于事件的按钮级高亮在“按钮点击前已经稳定可见”时效果最好。
-
-## 英文文档
-
-See [`README.en.md`](./README.en.md).
+- This project is for browser media only, not desktop capture.
+- Playwright recording quality depends on the browser capture path and viewport stability.
+- Event-derived highlight precision is best when click targets are visible and stable before interaction.
