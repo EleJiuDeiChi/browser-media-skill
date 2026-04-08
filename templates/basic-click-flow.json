@@ -1,0 +1,5 @@
+[
+  { "type": "wait", "ms": 500 },
+  { "type": "click", "selector": "#action" },
+  { "type": "wait", "ms": 800 }
+]

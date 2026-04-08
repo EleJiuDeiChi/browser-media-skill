@@ -1,0 +1,23 @@
+{
+  "name": "browser-media-skill",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Portable browser media tooling for screenshots, recordings, annotations, and timeline rendering.",
+  "bin": {
+    "browser-capture": "./bin/browser-capture",
+    "browser-record": "./bin/browser-record",
+    "browser-timeline-validate": "./bin/browser-timeline-validate",
+    "browser-timeline-render": "./bin/browser-timeline-render",
+    "browser-timeline-from-events": "./bin/browser-timeline-from-events"
+  },
+  "scripts": {
+    "test": "node --test scripts/*.test.js"
+  },
+  "dependencies": {
+    "playwright": "^1.54.2"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

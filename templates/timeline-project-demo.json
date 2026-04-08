@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "input": {
+    "video": "/abs/path/input.mp4"
+  },
+  "output": {
+    "path": "/abs/path/output.mp4",
+    "format": "mp4"
+  },
+  "theme": {
+    "fontFamily": "Arial",
+    "textColor": "#ffffff",
+    "accentColor": "#ff3b30",
+    "dimColor": "#000000b3"
+  },
+  "timeline": [
+    {
+      "id": "box-1",
+      "type": "box",
+      "startMs": 100,
+      "endMs": 1200,
+      "x": 40,
+      "y": 40,
+      "width": 180,
+      "height": 100
+    },
+    {
+      "id": "text-1",
+      "type": "text",
+      "startMs": 200,
+      "endMs": 1500,
+      "x": 250,
+      "y": 50,
+      "text": "Demo step",
+      "fontSize": 24
+    },
+    {
+      "id": "mask-1",
+      "type": "mask",
+      "startMs": 1200,
+      "endMs": 1800,
+      "x": 380,
+      "y": 180,
+      "width": 180,
+      "height": 80,
+      "opacity": 0.65
+    },
+    {
+      "id": "spot-1",
+      "type": "spotlight",
+      "startMs": 1700,
+      "endMs": 2300,
+      "shape": "rect",
+      "x": 180,
+      "y": 120,
+      "width": 180,
+      "height": 120
+    },
+    {
+      "id": "blur-1",
+      "type": "blur",
+      "startMs": 2300,
+      "endMs": 2700,
+      "x": 60,
+      "y": 220,
+      "width": 120,
+      "height": 80,
+      "strength": 8
+    },
+    {
+      "id": "arrow-1",
+      "type": "arrow",
+      "startMs": 500,
+      "endMs": 1300,
+      "from": [300, 180],
+      "to": [180, 90]
+    }
+  ]
+}

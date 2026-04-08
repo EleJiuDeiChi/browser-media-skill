@@ -1,0 +1,5 @@
+[
+  { "type": "box", "x": 120, "y": 220, "width": 180, "height": 48, "color": "#ff3b30", "widthPx": 4 },
+  { "type": "arrow", "from": [360, 180], "to": [220, 244], "color": "#ff3b30", "widthPx": 6 },
+  { "type": "text", "x": 380, "y": 150, "text": "Primary action", "color": "#ff3b30", "fontSize": 28 }
+]

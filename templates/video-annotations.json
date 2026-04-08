@@ -1,0 +1,4 @@
+[
+  { "type": "box", "x": 120, "y": 220, "width": 180, "height": 48, "color": "red", "widthPx": 4 },
+  { "type": "text", "x": 340, "y": 170, "text": "Key step", "color": "red", "fontSize": 26 }
+]

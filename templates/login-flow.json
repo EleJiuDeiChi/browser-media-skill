@@ -1,0 +1,7 @@
+[
+  { "type": "waitForSelector", "selector": "input[name='username']" },
+  { "type": "fill", "selector": "input[name='username']", "value": "demo@example.com" },
+  { "type": "fill", "selector": "input[name='password']", "value": "ChangeMe123!" },
+  { "type": "click", "selector": "button[type='submit']" },
+  { "type": "wait", "ms": 1500 }
+]

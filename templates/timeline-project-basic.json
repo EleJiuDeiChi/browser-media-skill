@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "input": {
+    "video": "/abs/path/input.mp4"
+  },
+  "output": {
+    "path": "/abs/path/output.mp4",
+    "format": "mp4"
+  },
+  "timeline": [
+    {
+      "id": "box-1",
+      "type": "box",
+      "startMs": 250,
+      "endMs": 1500,
+      "x": 80,
+      "y": 120,
+      "width": 180,
+      "height": 64
+    },
+    {
+      "id": "text-1",
+      "type": "text",
+      "startMs": 350,
+      "endMs": 1500,
+      "x": 300,
+      "y": 120,
+      "text": "Primary action"
+    }
+  ]
+}
